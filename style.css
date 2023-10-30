@@ -1,0 +1,203 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&family=Poppins:wght@300;400;500;700");
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@600&display=swap');
+
+Body {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 300; /* if you want the light version */
+  background-color: #f5f5dc;
+  line-height: 2;
+  font-size: 22;
+  margin: auto;
+  width: 45%;
+  padding: 50;
+  color: white;
+}
+
+p {
+  font-family:'Inter' sans-serif;
+}
+
+.body_structure {
+  text-align: center;
+}
+
+.profile_pic {
+  border-radius: 50%;
+  width: 200px;
+  height: 200px;
+  box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+}
+
+.fa-brands {
+  color: rgb(255, 255, 255);
+  margin: auto;
+  text-align: center;
+  padding: 35px 25px;
+}
+
+.fa-brands:hover {
+  color:brown;
+}
+
+h3 {
+  font-weight: lighter;
+  padding: 5;
+  font-family:'Inter';
+}
+
+ul {
+  margin: 0px;
+  padding: 25px;
+}
+
+ul a {
+  text-decoration: none;
+}
+
+h1 {
+  color: #ffffff;
+  padding: 25px;
+  overflow: hidden;
+  /* border-right: .10em solid #969696; */
+  white-space: nowrap;
+  margin: 0 auto;
+  letter-spacing: .4rem;
+  animation: demo-typewriter 3s steps(30, end);
+}
+
+@keyframes demo-typewriter {
+  from {
+    width: 0;
+  }
+  to {
+    width: 80%;
+  }
+}
+
+@keyframes demo-cursor {
+  from, to {
+    border-color: transparent;
+}
+  50% {
+border-color: #d5bdaf;
+  }
+}
+
+button {
+  animation: wiggle 2s linear infinite;
+  padding: 7.5px;
+}
+
+/* Keyframes */
+@keyframes wiggle {
+  0%, 7% {
+    transform: rotateZ(0);
+  }
+  15% {
+    transform: rotateZ(-15deg);
+  }
+  20% {
+    transform: rotateZ(10deg);
+  }
+  25% {
+    transform: rotateZ(-10deg);
+  }
+  30% {
+    transform: rotateZ(6deg);
+  }
+  35% {
+    transform: rotateZ(-4deg);
+  }
+  40%, 100% {
+    transform: rotateZ(0);
+  }
+}
+
+body {
+  height: 100vh;
+   background: linear-gradient(90deg, #003049, #d62828,#f77f00, #fcbf49, #eae2b7);
+   background-repeat: no-repeat;
+   display: flex;
+}
+
+.slider-thumb::before {
+  position: absolute;
+  background-repeat: no-repeat;
+  content: "";
+  left: 22%;
+  top: 20%;
+  width: 1000px;
+  height: 800px;
+  background: #17141d;
+  border-radius: 62% 47% 82% 35% / 45% 45% 80% 66%;
+  will-change: border-radius, transform, opacity;
+  animation: sliderShape 5s linear infinite;
+  display: block;
+  z-index: -1;
+  -webkit-animation: sliderShape 5s linear infinite;
+}
+@keyframes sliderShape{
+  0%,100%{
+  border-radius: 42% 58% 70% 30% / 45% 45% 55% 55%;
+    transform: translate3d(0,0,0) rotateZ(0.01deg);
+  }
+  34%{
+      border-radius: 70% 30% 46% 54% / 30% 29% 71% 70%;
+    transform:  translate3d(0,5px,0) rotateZ(0.01deg);
+  }
+  50%{
+    transform: translate3d(0,0,0) rotateZ(0.01deg);
+  }
+  67%{
+    border-radius: 100% 60% 60% 100% / 100% 100% 60% 60% ;
+    transform: translate3d(0,-3px,0) rotateZ(0.01deg);
+  }
+}
+
+@media (max-width: 960px) {
+  /* For a screen < 960px, this CSS will be read */
+  .body_structure {
+    width: 600px;
+  }
+  .slider-thumb::before {
+    left: 12%;
+    top: 20%;
+    width: 1000px;
+    height: 800px;
+  }
+  body {
+    width: 100%;
+  }
+}
+
+@media (max-width: 720px) {
+  /* For a screen < 720px, this CSS will be read */
+  .body_structure {
+    width: 700px;
+  }
+
+  .slider-thumb::before {
+    left: 1%;
+    top: 20%;
+    width: 1000px;
+    height: 800px;
+  }
+  body {
+    width: 100%;
+  }
+}
+@media (max-width: 540px) {
+  /* For a screen < 540px, this CSS will be read */
+  .body_structure {
+    width: 300px;
+  }
+  .slider-thumb::before {
+    left: -30%;
+    top: 20%;
+    width: 1000px;
+    height: 1500px;
+  }
+  body {
+    width: 100%;
+  }
+}
